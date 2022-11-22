@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work 2 js</title>
+  </head>
+  <body>
+    <!--
+Використовуючи циклічні конструкції, пробіли (&nbsp;) та зірки (*) намалюйте:
+Порожній 
+- прямокутник 
+Заповнений 
+- Рівнобедрений трикутник 
+- Трикутник прямокутний
+- Ромб
+    -->
+
+    <script>
+      // Порожній
+      // - прямокутник
+      document.write("Порожній прямокутник" + "<br>" + "<br>");
+
+      let str = 7;
+      let col = 14;
+
+      for (let i = 0; i < str; i++) {
+        for (let j = 0; j < col; j++) {
+          if (i == 0 || i == str - 1) {
+            document.write("*");
+          } else if (j == 0 || j == col - 1) {
+            document.write("*");
+          } else {
+            document.write(" &nbsp;");
+          }
+        }
+        document.write("<br>");
+      }
+
+    
+      // -----------------------------------------------------------------------
+      // Заповнений
+      // - Рівнобедрений трикутник
+
+      document.write(
+        "<br>" + "Заповнений рівнобедрений трикутник" + "<br>" + "<br>"
+      );
+
+      for (let i = 0; i < 10; i++) {
+        for (let j = i + 1; j < 10; j++) {
+          document.write("&nbsp;");
+        }
+        for (let y = 1 + i; y > 0; y--) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+
+
+      // -----------------------------------------------------------------------
+      // Заповнений
+      // - Прямокутний трикутник
+
+      document.write(
+        "<br>" + "Заповнений прямокутний трикутник" + "<br>" + "<br>"
+      );
+
+      for (let i = 0; i < 10; i++) {
+        for (let j = i + 1; j < 10; j++) {
+          document.write(" ");
+        }
+        for (let y = 1 + i; y > 0; y--) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+
+      
+      // -----------------------------------------------------------------------
+      // Заповнений
+      // - Ромб
+
+      document.write("<br>" + "Заповнений Ромб" + "<br>" + "<br>");
+
+      for (let i = 0; i <= 6; i++) {
+        for (let j = (6 - i) * 2 + 1; j > 0; j--) {
+          document.write("&nbsp;");
+        }
+        for (let j = 1; j <= i * 2 + 1; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+
+      for (let i = 1; i <= 6; i++) {
+        for (let j = 0; j < i * 2 + 1; j++) {
+          document.write("&nbsp;");
+        }
+        for (let j = (6 - i) * 2 + 1; j > 0; j--) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
